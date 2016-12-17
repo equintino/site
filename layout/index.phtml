@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+<head>
+    <title>EMQDesenv - Aplicações</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="https://fonts.googleapis.com/css?family=Lovers+Quarrel|Miltonian+Tattoo|Sriracha" rel="stylesheet" /> 
+    <link rel="shortcut icon" href="emqdesenv.ico" type="image/x-icon" />
+    <meta name="description" content="emqdesenv - Aplicações" />
+    <meta name="keywords" content="sistemas, PHP" />
+    <meta name="author" content="Edmilson Messias Quintino" />
+
+    <link type="text/css" href="css/redmond/jquery-ui-1.8.16.custom.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/layout.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/viewer.css" />
+    <link rel="stylesheet" href="css/$theme_colors.css" />
+    <link rel="stylesheet" href="css/lightbox.min.css" />
+    
+
+    <script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/lightbox-plus-jquery.min.js"></script>
+    
+
+</head>
+<body id="page">
+  <div class="SITE_ROOT" id="SITE_ROOT" >
+    <div class="tail-top-right"></div>
+    <div id="main">        
+        <!-- header -->
+      <div id="header">
+         <div class="s1" id="SITE_STRUCTURE_WRichText_0" >
+            <h1 class="font_0">EMQ<span class="color_19" id="logo">Desenv</span></h1>
+         </div>
+         <div class="s6" id="FvGrdLn0" ></div>
+            <div id="DrpDwnMn1" class="s7" >
+               <div id="DrpDwnMn1itemsContainer" class="s7itemsContainer" >
+                   <?php 
+                     $menu=array('index.php?pagina=home' => 'Página inicial','index.php?pagina=Sobre' => 'Sobre', 'index.php?pagina=Projetos' => 'Projetos', 'index.php?pagina=Contato' => 'Contato');
+                     foreach($menu as $key => $item){
+                      echo '<a href="'.$key.'" class="s7repeaterButton" id="DrpDwnMn10" ><div id="DrpDwnMn10bg" class="s7repeaterButtonbg" ><p id="DrpDwnMn10label" class="s7repeaterButtonlabel" >'.$item.'</p></div></a>';
+                     }                   
+                   ?>
+               </div>
+          </div>
+       </div>
+        <!-- content -->
+        <div id="content">
+            <div class="wrapper">
+                <div class="col-1">
+                </div>
+                <div class="col-2">
+                    <div class="indent">
+                        <?php if ($flashes): ?>
+                            <ul id="flashes">
+                            <?php foreach ($flashes as $flash): ?>
+                                <li><?php echo $flash; ?></li>
+                            <?php endforeach; ?>
+                            </ul>
+                        <?php endif; ?>
+                        <?php require $template; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- footer -->
+        <div id="footer"> 
+          <div  id="SITE_FOOTER"  >
+              <div class="linhaSuperior">&nbsp</div>
+              <div id="SITE_STRUCTURE_WRichText_1" ><p class="font_9" style="line-height:1.3em"><span>© Copyright, All rights reserved</span></p></div>
+              <div class="linhaFinal">&nbsp</div>
+          </div> 
+        </div>
+     </div>
+   </div>
+</body>
+</html>
